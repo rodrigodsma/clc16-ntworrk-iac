@@ -3,13 +3,13 @@ resource "aws_vpc" "clc_vpc" {
   instance_tenancy = "default"
 
   tags = {
-    Name = "vpc-terraform_automation"
+    Name = "vpc-terraform_automation_v1"
   }
 }
 
 resource "aws_subnet" "public_subnet_1a" {
   vpc_id     = aws_vpc.clc_vpc.id
-  cidr_block = "172.16.1.0/24"git
+  cidr_block = "172.16.1.0/24"
   availability_zone = "us-east-1a" 
   tags = {
     Name = "public_subnet_1a_tf"
