@@ -24,7 +24,8 @@ output "public_rt_assoc_1a_id" {
 }
 
 output "private_rt_1a_id" {
-  value = aws_route_table.private_rt.id
+  description = "ID of the private route table for 1a"
+  value       = aws_route_table.private_rt_1a.id
 }
 
 output "private_rt_assoc_1a_id" {
@@ -72,13 +73,14 @@ output "private_rt_assoc_1c_id" {
 }
 
 # --- FASE 5: EC2 pública com Apache ---
-#output "ec2_security_group_id" {
- # value = aws_security_group.ec2_web_sg.id
-#}
-
-#output "ec2_instance_id" {
- # value = aws_instance.web.id
-#}
-
-## value = aws_instance.web.public_ip
-#}
+# output "ec2_security_group_id" {
+#   value = aws_security_group.ec2_web_sg.id
+# }
+#
+# output "ec2_instance_id" {
+#   value = aws_instance.web.id
+# }
+#
+# output "ec2_public_ip" {
+#   value = aws_instance.web.public_ip
+# }
